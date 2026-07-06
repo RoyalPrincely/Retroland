@@ -1,0 +1,41 @@
+body {
+    font-family: Monospace;
+    background-color: #000000;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    cursor: crosshair;
+}
+
+h1, h2 {
+    color: lime;
+    text-shadow: 2px 2px black;
+}
+
+::selection {
+    background-color: #1a1a1a;
+    color: #e9e0d2;
+    text-shadow: 0 0 5px #e9e0d2;
+}
+
+::-moz-selection {
+    background-color: #1a1a1a;
+    color: #e9e0d2;
+    text-shadow: 0 0 5px #e9e0d2;
+}
+
+/* Custom scrollbar styling for the guestbook container */
+#guestbook-entries::-webkit-scrollbar {
+    width: 6px;
+}
+
+#guestbook-entries::-webkit-scrollbar-track {
+    background: #000000;
+    border-left: 1px dashed lime;
+}
+
+#guestbook-entries::-webkit-scrollbar-thumb {
+    background: lime;
+    border-radius: 3px;
+}
