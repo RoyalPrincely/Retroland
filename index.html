@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black</title>
+    
+    <!-- 💡 CRITICAL INLINE CSS: Instantly satisfies Lighthouse above-the-fold paints -->
+    <style>
+        body {
+            font-family: Monospace;
+            background-color: #000000;
+            line-height: 1.6;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            cursor: crosshair;
+        }
+        h1, h2 {
+            color: lime;
+            text-shadow: 2px 2px black;
+        }
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <marquee behavior="scroll" direction="left" scrollamount="5" style="color: lime; font-weight: bold;">
+        🔥 WELCOME TO MY WEBSITE! 🔥
+    </marquee>
+
+    <h1>Hello, world!</h1>
+    <p>Welcome to my retro website!</p>
+    
+    <!-- Neon Double Divider Line -->
+    <hr style="border: none; border-top: 3px double lime; box-shadow: 0 0 8px lime; margin: 25px 0;">
+
+    <!-- Main Layout Wrapper -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+        
+        <!-- Left Column: Main Content Area -->
+        <div style="flex: 2; min-width: 250px; display: flex; flex-direction: column; gap: 20px;">
+            
+            <!-- 👤 ABOUT ME BOX -->
+            <div style="border: 2px outset #333333; background: #111111; padding: 15px;">
+                <h2 style="margin-top: 0; font-size: 18px; color: lime; text-shadow: none;">👤 SYSTEM USER_PROFILE</h2>
+                <p style="margin: 5px 0; font-size: 14px;"><strong style="color: yellow;">HANDLE:</strong> Charles_X</p>
+                <p style="margin: 5px 0; font-size: 14px;"><strong style="color: yellow;">STATUS:</strong> Webmaster & Retro Fanatic</p>
+                <!-- ⚡ FIXED: Corrected grammar fragment here -->
+                <p style="margin: 15px 0 5px 0; font-size: 14px; line-height: 1.5; color: #cccccc;">
+                    Hello, I build full-stack websites using my knowledge of HTML, CSS, Node.js, Express.js, MySql, and JavaScript.
+                </p>
+            </div>
+
+            <!-- 🌐 WEB LINK DIRECTORY BOX -->
+            <div style="border: 2px outset #333333; background: #111111; padding: 15px;">
+                <h2 style="margin-top: 0; font-size: 18px; color: lime; text-shadow: none;">🌐 CYBERSPACE DIRECTORY</h2>
+                <p style="font-size: 12px; color: #888; margin-top: -5px; margin-bottom: 15px;">A curated portal of recommended internet nodes:</p>
+                
+                <ul style="list-style-type: '📁 '; padding-left: 20px; margin: 0; display: flex; flex-direction: column; gap: 10px;">
+                    <li>
+                        <a href="https://neocities.org" target="_blank" style="color: lime; font-weight: bold; text-decoration: none;">Neocities Central Hub</a>
+                        <div style="font-size: 12px; color: #aaa; margin-left: 5px;">The ultimate modern revival sanctuary for independent geocities-style retro creators.</div>
+                    </li>
+                    <li>
+                        <a href="https://wiby.me" target="_blank" style="color: lime; font-weight: bold; text-decoration: none;">The Wiby Search Engine</a>
+                        <div style="font-size: 12px; color: #aaa; margin-left: 5px;">A specialized portal web engine dedicated strictly to indexing lightweight, text-only websites.</div>
+                    </li>
+                    <li>
+                        <a href="https://archive.org" target="_blank" style="color: lime; font-weight: bold; text-decoration: none;">The Wayback Machine</a>
+                        <div style="font-size: 12px; color: #aaa; margin-left: 5px;">An absolute goldmine repository for exploring original 90s graphics, assets, and layouts.</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Glowing Dashed Accent Line to Separate Content From Guestbook -->
+            <hr style="border: none; border-top: 2px dashed lime; margin: 10px 0; width: 100%;">
+
+            <!-- Guestbook Box Container -->
+            <div style="border: 2px outset #333333; background: #111111; padding: 15px; width: calc(100% - 34px);">
+                <!-- ⚡ FIXED: Repaired corrupted emoji character encoding -->
+                <h2 style="margin-top: 0; font-size: 18px; color: lime; text-shadow: none;">✍️ SIGN MY GUESTBOOK</h2>
+                
+                <form id="guestbook-form" onsubmit="event.preventDefault();" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="text" id="visitor-name" placeholder="YOUR HANDLE / NAME" required style="background: #000000; color: lime; border: 1px solid lime; font-family: Monospace; padding: 5px;">
+                    <textarea id="visitor-message" placeholder="LEAVE A COOL MESSAGE..." required rows="3" style="background: #000000; color: lime; border: 1px solid lime; font-family: Monospace; padding: 5px; resize: none;"></textarea>
+                    <button type="submit" style="background: lime; color: black; font-family: Monospace; font-weight: bold; border: 2px outset #ffffff; cursor: pointer; padding: 5px;"> SUBMIT ENTRY </button>
+                </form>
+
+                <div id="guestbook-entries" style="margin-top: 15px; border-top: 1px dashed lime; padding-top: 10px; max-height: 150px; overflow-y: auto;"></div>
+            </div>
+        </div>
+
+        <!-- Vertical HTML Column Divider Rule -->
+        <hr style="border: none; border-left: 2px outset #333333; margin: 0; min-height: 100%;">
+
+        <!-- Right Column: Sidebar Dashboard Widgets -->
+        <div style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 15px;">
+            
+            <!-- System Clock Widget -->
+            <div>
+                <div style="font-size: 11px; color: #888; font-family: Monospace; margin-bottom: 3px;">📟 SYSTEM TIME:</div>
+                <div id="retro-clock" style="color: lime; font-family: Monospace; font-size: 24px; font-weight: bold; border: 2px outset #333333; background: #111111; display: inline-block; padding: 10px; text-shadow: 0 0 5px lime; width: calc(100% - 24px); text-align: center;">
+                    00:00:00 AM
+                </div>
+            </div>
+
+            <!-- Fake System Status Widget -->
+            <div style="border: 2px outset #333333; background: #111111; padding: 10px; font-family: Monospace; font-size: 12px; color: lime;">
+                <!-- ⚡ FIXED: Repaired corrupted emoji character encoding -->
+                <div style="color: yellow; font-weight: bold; margin-bottom: 5px;">🖥️ SERVER STATUS</div>
+                <div>&gt; Mainframe: <span style="color: white;">ONLINE</span></div>
+                <div>&gt; Firewall: <span style="color: white;">ACTIVE</span></div>
+                <div>&gt; Uptime: <span style="color: white;">100%</span></div>
+            </div>
+
+            <!-- Retro Hit Counter Widget -->
+            <div>
+                <div style="font-size: 11px; color: #888; font-family: Monospace; margin-bottom: 3px;">👤 VISITOR ACCOUNTABILITY:</div>
+                <div id="hit-counter" style="border: 2px outset #333333; background: #000000; color: #ff00ff; display: block; padding: 8px; font-family: monospace; font-size: 18px; font-weight: bold; text-align: center; letter-spacing: 2px; text-shadow: 0 0 4px #ff00ff;">
+                    000000
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🚀 NON-RENDER-BLOCKING STYLESHEET: Safely loads out of the way of the critical first paint path -->
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>
